@@ -11,7 +11,7 @@ class Entry(models.Model):
     title = models.CharField(blank=False, max_length=25)
     description = models.TextField()
     tag = models.CharField(max_length=20)
-    file = models.ImageField()
+    file = models.ImageField(upload_to='images')
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 
